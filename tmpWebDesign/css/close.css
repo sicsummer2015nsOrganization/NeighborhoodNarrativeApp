@@ -1,0 +1,35 @@
+
+
+.navClose{
+height: 150px;
+}
+
+.posMiddle{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.posCenter{
+text-align: center;
+}
+
+.posRowMarginTop{
+margin-top: 1.2em;
+}
+
+.posRowMarginBottom{
+margin-bottom: 1.2em;
+}
+
+.chkSizeLg{
+	width : 2.0em;
+	height : 2.0em;
+	padding: 0px;
+	margin: 0px;
+	color: red;
+}
+
+.resultsMain{
+height: 500px;
+}
