@@ -30,7 +30,9 @@ margin-bottom: 1.2em;
 }
 
 .resultsMain{
-height: 500px;
+height: 300px;
+background-color: whitesmoke;
+color: red;
 }
 
 /*Deirdre's styles*/
