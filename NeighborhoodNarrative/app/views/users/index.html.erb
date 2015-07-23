@@ -27,25 +27,6 @@
 ================================================== -->
   <body>
   
-  
-
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-static-top navClose">
-      <div class="container posMiddle posCenter">
-<div class="row">
-  <div class="col-xs-4">
-  <a class="btn btn-primary btn-lg" href="index.htm" role="button">HOME</a>
-  </div>
-  <div class="col-xs-4">
-     <div>Close to Home Image</div>  
-  </div>
-  <div class="col-xs-4">
-<a class="btn btn-primary btn-lg" href="<%= users_about_path %>" role="button">ABOUT</a>  
-  </div>
-</div>
-      </div>
-    </nav>
 
 
     <!-- Carousel
@@ -59,7 +40,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="img/wild_111.jpg" alt="First slide">
+           <%=url(assets/images/wild_111.jpg) %> 
           <div class="container">
             <div class="carousel-caption">
               <h1>Example headline.</h1>
@@ -122,7 +103,7 @@
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
+     
 
       <!-- /END THE FEATURETTES -->
 
