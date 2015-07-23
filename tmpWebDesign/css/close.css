@@ -25,9 +25,8 @@ margin-bottom: 1.2em;
 .chkSizeLg{
 	width : 2.0em;
 	height : 2.0em;
-	padding: 0px;
-	margin: 0px;
-	color: red;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 }
 
 .resultsMain{
@@ -121,6 +120,17 @@ body{
 	position: relative !important;
 	padding-top: 4em !important;
 }*/
+.carousel-max-caption{
+	height: 100%;
+	padding-top: 3em;
+}
+
+.carousel-max-img{
+	max-height: 85%;
+}
+.carousel-max-p{
+	max-height: 15%;
+}
 
 .carousel-control.left, .carousel-control.right {
 	background: none !important; 
