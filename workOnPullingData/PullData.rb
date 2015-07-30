@@ -111,13 +111,14 @@ def collectAllData (personna, zip)
 end
 
 
-def post(url)
+def post(zip, personna)
+	url = "https://api.narrativescience.com/v4/editorial/55b135718ff57d597c2fb6e6/story/"
 	uri = URI.parse(url)
 	https = Net::HTTP.new(uri.host, uri.port)
 	https.use_ssl = true
 	https.verify_mode = OpenSSL::SSL::VERIFY_NONE
 	request = Net::HTTP::Post.new(uri.path, initheader = {'content-type' =>'application/json', 'x-ns-api-token' => '55b13546374bb105eefa0d69', 'x-ns-accepts' => 'html', 'x-ns-template' => '55ba57a218c29f773c073cb5'})
-	request.body = collectAllData("child","60613")
+	request.body = collectAllData(personna,zip)
 	
 	response = https.request(request)
 	puts response.body
@@ -127,6 +128,6 @@ end
 
 
 
-post("https://api.narrativescience.com/v4/editorial/55b135718ff57d597c2fb6e6/story/")
+post("60613", "child")
 
 
