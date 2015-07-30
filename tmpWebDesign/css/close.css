@@ -25,13 +25,14 @@ margin-bottom: 1.2em;
 .chkSizeLg{
 	width : 2.0em;
 	height : 2.0em;
-	padding: 0px;
-	margin: 0px;
-	color: red;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 }
 
 .resultsMain{
-height: 500px;
+height: 300px;
+background-color: whitesmoke;
+color: red;
 }
 
 /*Deirdre's styles*/
@@ -60,6 +61,7 @@ body{
  .navbar{
  	margin-top: 1em;
  	margin-bottom: 1em;
+ 	padding-top: 2em;
  }
 
 .navbar-default {
@@ -109,7 +111,7 @@ body{
 }
 .btn-primary {
   background-color: #009ED4;
-  border-color: white;
+  border-color: #009ED4;
 }
 
 .logo{
@@ -121,6 +123,17 @@ body{
 	position: relative !important;
 	padding-top: 4em !important;
 }*/
+.carousel-max-caption{
+	height: 100%;
+	padding-top: 3em;
+}
+
+.carousel-max-img{
+	max-height: 85%;
+}
+.carousel-max-p{
+	max-height: 15%;
+}
 
 .carousel-control.left, .carousel-control.right {
 	background: none !important; 
@@ -129,8 +142,13 @@ body{
 	text-shadow: none;
 }
 
+p {
+  margin: 0 0 2em;
+}
+
 .enter{
 	background-color: #EC1E24;
+	border-color: #EC1E24;;
 }
 /*search page items:
 */
@@ -160,3 +178,4 @@ footer{
 	color: #009ED4;
 
 }
+
