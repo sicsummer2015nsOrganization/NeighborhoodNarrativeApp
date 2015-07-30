@@ -32,7 +32,7 @@ def createHighSchoolDictionary(zip)
 			schools.push modSchool
 		end
 	end
-	return schools.to_json
+	return schools
 end
 
 def createElementarySchoolDictionary(zip)
@@ -52,7 +52,7 @@ def createElementarySchoolDictionary(zip)
 		schools.push modSchool
 		end
 	end
-	return schools.to_json
+	return schools
 end
 
 def createEarlyChildhoodDictionary(zip)
@@ -73,7 +73,7 @@ def createEarlyChildhoodDictionary(zip)
 		schools.push modSchool
 	end
 	end
-	return schools.to_json
+	return schools
 end
 
 def createParkDictionary(zip)
@@ -95,7 +95,7 @@ def createParkDictionary(zip)
 		parks.push modPark
 	end
 	end
-	return parks.to_json
+	return parks
 end
 
 
@@ -107,6 +107,7 @@ def collectAllData (personna, zip)
 	allData["highSchools"] = createHighSchoolDictionary zip
 	allData["elementarySchools"] = createElementarySchoolDictionary zip
 	allData["earlyChildHoodPrograms"] = createEarlyChildhoodDictionary zip
+	puts allData.to_json
 	return allData.to_json
 end
 
