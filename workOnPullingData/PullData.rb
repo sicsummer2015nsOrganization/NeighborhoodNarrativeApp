@@ -1,8 +1,8 @@
 require 'rubygems'
 require 'json'
 require 'net/http'
-#require 'geokit-rails'
-#include Geokit::Geocoders
+require 'net/https'
+require 'uri'
 
 
 
@@ -15,28 +15,31 @@ def fetch(url)
 end
 
 
-def createHighSchoolDictionary(url)
-	data = fetch url
+def createHighSchoolDictionary(zip)
+	data = fetch("https://data.cityofchicago.org/resource/2m8w-izji.json")
 	schools = Array.new
 	for school in data
-		modSchool = Hash.new("")
-		modSchool["safe"] = school["safe"]
-		modSchool["name_of_school"] = school["name_of_school"]
-		modSchool["location"] = school["location"]
-		modSchool["street_address"] = school["address"]
-		modSchool["zip_code"] = school["zip_code"]
-		modSchool["website"] = school["website"]
-		modSchool["effective_leaders"] = school["effective_leaders"]
-		modSchool["_4_year_graduation_rate_percentage_2013"] =  school["_4_year_graduation_rate_percentage_2013"]
-		schools.push modSchool
+		if (school["zip"] == zip)
+			modSchool = Hash.new("")
+			modSchool["safe"] = school["safe"]
+			modSchool["name_of_school"] = school["name_of_school"]
+			modSchool["location"] = school["location"]
+			modSchool["street_address"] = school["street_address"]
+			modSchool["zip_code"] = school["zip"]
+			modSchool["website"] = school["website"]
+			modSchool["effective_leaders"] = school["effective_leaders"]
+			modSchool["_4_year_graduation_rate_percentage_2013"] =  school["_4_year_graduation_rate_percentage_2013"]
+			schools.push modSchool
+		end
 	end
 	return schools
 end
 
-def createElementarySchoolDictionary(url)
-	data = fetch url
+def createElementarySchoolDictionary(zip)
+	data = fetch("https://data.cityofchicago.org/resource/tj8h-mnuv.json")
 	schools = Array.new
 	for school in data
+	if (school["zip_code"] == zip)
 		modSchool = Hash.new("")
 		modSchool["safe"] = school["safe"]
 		modSchool["name_of_school"] = school["name_of_school"]
@@ -47,33 +50,37 @@ def createElementarySchoolDictionary(url)
 		modSchool["effective_leaders"] = school["effective_leaders"]
 		modSchool["student_attendance_percentage_2013"] =  school["student_attendance_percentage_2013"]
 		schools.push modSchool
+		end
 	end
 	return schools
 end
 
-def createEarlyChildhoodDictionary(url)
-	data = fetch url
+def createEarlyChildhoodDictionary(zip)
+	data = fetch("https://data.cityofchicago.org/resource/ck29-hb9r.json")
 	schools = Array.new
 	for school in data
+	if (school["zip"] == zip)
 		modSchool = Hash.new("")
 		modSchool["weekday_availability"] = school["weekday_availability"]
 		modSchool["site_name"] = school["site_name"]
 		modSchool["location"] = school["location"]
 		modSchool["street_address"] = school["address"]
-		modSchool["zip_code"] = school["zip_code"]
+		modSchool["zip_code"] = school["zip"]
 		modSchool["url"] = school["url"]
 		modSchool["duration_hours"] = school["duration_hours"]
 		modSchool["program_information"] =  school["program_information"]
 		modSchool["quality_rating"] = school["quality_rating"]
 		schools.push modSchool
 	end
+	end
 	return schools
 end
 
-def createParkDictionary(url)
-	data = fetch url
+def createParkDictionary(zip)
+	data = fetch("https://data.cityofchicago.org/resource/wwy2-k7b3.json")
 	parks = Array.new
 	for park in data
+	if(park["zip"] == zip)
 		modPark = Hash.new("")
 		modPark["park_name"] = park["park_name"]
 		modPark["zip"] = park["zip"]
@@ -87,23 +94,41 @@ def createParkDictionary(url)
 		modPark["community_garden"] =  park["community_garden"]
 		parks.push modPark
 	end
+	end
 	return parks
 end
 
 
 
-def collectAllData (personna)
-	highSchoolProgress = "https://data.cityofchicago.org/resource/2m8w-izji.json"
-	elementarySchoolProgress = "https://data.cityofchicago.org/resource/tj8h-mnuv.json"
-	park = "https://data.cityofchicago.org/resource/wwy2-k7b3.json"
-	earlyChildhoodDevelopment = "https://data.cityofchicago.org/resource/ck29-hb9r.json"
+def collectAllData (personna, zip)
 	allData = Hash.new("")
 	allData["personna"] = personna
-	allData["parks"] = createParkDictionary park
-	allData["highSchools"] = createHighSchoolDictionary highSchoolProgress
-	allData["elementarySchools"] = createElementarySchoolDictionary elementarySchoolProgress
-	allData["earlyChildHoodPrograms"] = createEarlyChildhoodDictionary earlyChildhoodDevelopment
+	allData["parks"] = createParkDictionary zip
+	allData["highSchools"] = createHighSchoolDictionary zip
+	allData["elementarySchools"] = createElementarySchoolDictionary zip
+	allData["earlyChildHoodPrograms"] = createEarlyChildhoodDictionary zip
+	puts allData.to_json
 	return allData.to_json
 end
 
-puts collectAllData "person"
+
+def post(zip, personna)
+	url = "https://api.narrativescience.com/v4/editorial/55b135718ff57d597c2fb6e6/story/"
+	uri = URI.parse(url)
+	https = Net::HTTP.new(uri.host, uri.port)
+	https.use_ssl = true
+	https.verify_mode = OpenSSL::SSL::VERIFY_NONE
+	request = Net::HTTP::Post.new(uri.path, initheader = {'content-type' =>'application/json', 'x-ns-api-token' => '55b13546374bb105eefa0d69', 'x-ns-accepts' => 'html', 'x-ns-template' => '55ba57a218c29f773c073cb5'})
+	request.body = collectAllData(personna,zip)
+	
+	response = https.request(request)
+	puts response.body
+end
+
+
+
+
+
+post("60613", "child")
+
+
