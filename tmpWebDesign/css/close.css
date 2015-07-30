@@ -61,6 +61,7 @@ body{
  .navbar{
  	margin-top: 1em;
  	margin-bottom: 1em;
+ 	padding-top: 2em;
  }
 
 .navbar-default {
@@ -110,7 +111,7 @@ body{
 }
 .btn-primary {
   background-color: #009ED4;
-  border-color: white;
+  border-color: #009ED4;
 }
 
 .logo{
@@ -141,8 +142,13 @@ body{
 	text-shadow: none;
 }
 
+p {
+  margin: 0 0 2em;
+}
+
 .enter{
 	background-color: #EC1E24;
+	border-color: #EC1E24;;
 }
 /*search page items:
 */
@@ -172,3 +178,4 @@ footer{
 	color: #009ED4;
 
 }
+
