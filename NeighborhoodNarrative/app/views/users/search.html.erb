@@ -1,98 +1,100 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+    <title>Close To Home | Search</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/close.css" rel="stylesheet">
 
 
-    <div>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+  
+  
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <form>
       <div>
-
-        
-        <form target="_blank" onsubmit="return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);">
-        <div>
-          <div>
-          <h4>Please enter an address AND select the school range(s) that you are looking for:</h4>
-          </div>
-        </div>
-        <div>
-        <div> </div>
-          <div>
-          <span>ENTER ADDRESS</span><br>
-          <input type="text">
-          </div>
-          <div> </div>
-        </div>
-        <div>
-          <div>
-            <img src="http://img/baby.svg" alt="Generic placeholder image" width="140" height="140">
-            <h3>EARLY CHILDHOOD</h3>
-
-            <p>
-            <span>
-              <input type="checkbox">
-            </span>
-            </p>
-          </div>
-          <div>
-            <img src="http://img/childhood.svg" alt="Generic placeholder image" width="140" height="140">
-            <h3>ELEMENTARY</h3>
-            <p>
-            <span>
-              <input type="checkbox">
-            </span>
-            </p>
-          </div>
-          <div>
-            <img src="http://img/teen.svg" alt="Generic placeholder image" width="140" height="140">
-            <h3>HIGH SCHOOL</h3>
-            <p>
-            <span>
-              <input type="checkbox">
-            </span>
-            </p>
-          </div>
-        </div>
-        
-        <div>
-          <div>
-          <h4>Select any and all that apply 1, 2 or all three!</h4>
-          </div>
-        </div>
-       </form></div>        
-        
-
-        <div>
-            <div> </div>
-
-        </div>
+      <div class="row posRowMarginTop">
+      	<div class="col-lg-12 posCenter">
+      	<h4>Please enter an address AND select the school range(s) that you are looking for:</h4>
+      	</div>
+      </div>
+      <div class="row posRowMarginTop">
+      <div class="col-xs-1">&nbsp;</div>
+      	<div class="col-xs-10">
+      	<span>ENTER ADDRESS</span><br>
+      	<input type="text" class="form-control" placeholder="ADDRESS HERE">
+      	</div>
+      	<div class="col-xs-1">&nbsp;</div>
+      </div>
+      <div class="row posRowMarginTop posCenter">
+        <div class="col-lg-4">
+          <img class="img-circle" <%= link_to image_tag("baby.svg", alt: "baby") %>
+          <h3>EARLY CHILDHOOD</h3>
+          <p>
+          <span>
+        		<input id="chkEarlyChildhood" type="checkbox" class="chkSizeLg" aria-label="...">
+      		</span>
+          </p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" <%= link_to image_tag("childhood.svg", alt: "Middle School") %>
+          <h3>ELEMENTARY</h3>
+          <p>
+      		<span>
+        		<input id="chkElementary" type="checkbox" class="chkSizeLg" aria-label="...">
+      		</span>
+          </p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" <%= link_to image_tag("teen.svg", alt: "baby") %>
+          <h3>HIGH SCHOOL</h3>
+          <p>
+          <span>
+        		<input id="chkHighSchool" type="checkbox" class="chkSizeLg" aria-label="...">
+      		</span>
+          </p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      </div>
+      	<div class="col-xs-4">
+          <%= link_to "Enter", users_finalpage_path, class: "btn btn-primary btn-lg" %>
           
-          <div>
-           <button type="button">SEARCH</button>
-          </div>
-          
+      	</div>
+      </div>
+      </form>
 
 
+      <!-- START THE FEATURETTES -->
 
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
       
-
-      <hr>
-
-      
-
-
-      
-      
-        <p><a href="#0.2_">Back to top</a></p>
-        <p>© 2014 Company, Inc. · <a href="#0.2_">Privacy</a> · <a href="#0.2_">Terms</a></p>
-      
-
-    </div>
-    
-
-
-    
-    
-    
-    
-    
-    
-  </div>
-
-</body></html>
+  </body>
+</html>
