@@ -1,0 +1,75 @@
+
+
+      <div class="blue-bar">
+
+        <!-- Three columns of text below the carousel -->
+        <form>
+
+        <div class="row posRowMarginTop">
+          <div class="col-lg-12 posCenter">
+          <h4>Please enter zipcode AND select the school range(s) that you are looking for:</h4>
+          </div>
+        </div>
+        <div class="row posRowMarginTop">
+        <div class="col-xs-1">&nbsp;</div>
+          <div class="col-xs-10">
+          <span>ENTER ZIPCODE</span><br>
+          <input type="text" class="form-control" placeholder="ZIPCODE HERE">
+          
+          </div>
+          <div class="col-xs-1">&nbsp;</div>
+        </div>
+        
+        <div class="row posRowMarginTop posCenter">
+          <div class="col-sm-4">
+            <%= link_to image_tag("baby.svg",  class:"img-circle",  alt:"Generic placeholder image", width:"140", height:"140")  %>
+            <h3 class="Early Childhood">Early Childhood</h3>
+
+            <p>
+            <span>
+              <input id="chkEarlyChildhood" type="checkbox" class="chkSizeLg" aria-label="...">
+            </span>
+            </p>
+          </div>
+          
+          
+          <div class="col-sm-4">
+            <%= link_to image_tag("childhood.svg",  class:"img-circle",  alt:"Generic placeholder image", width:"140", height:"140")  %>
+            <h3 class="Elementary School">Elementary School</h3>
+            <p>
+            <span>
+              <input id="chkElementary" type="checkbox" class="chkSizeLg" aria-label="...">
+            </span>
+            </p>
+          </div>
+          </ul>
+          
+          <div class="col-sm-4">
+            <%= link_to image_tag("teen.svg",  class:"img-circle",  alt:"Generic placeholder image", width:"140", height:"140")  %>
+            <h3 class="school">HIGH SCHOOL</h3>
+            <p>
+            <span>
+              <input id="chkHighSchool" type="checkbox" class="chkSizeLg" aria-label="...">
+            </span>
+
+            </p>
+          </div>
+        </div><!-- /.row checkboxes -->
+        </ul>
+        <div class="row">
+          <div class="col-lg-12 posCenter posMiddle">
+          <h4>Select any and all that apply 1, 2 or all three!</h4>
+          </div>
+        </div>
+       </div>  
+       <%= render "form" %> 
+        <!--end blue bar-->
+
+        <div class="row posRowMarginTop">
+            <div class="col-lg-12">&nbsp;</div>
+<!--    this is for spacing only  -->
+        </div>
+
+          
+          
+
