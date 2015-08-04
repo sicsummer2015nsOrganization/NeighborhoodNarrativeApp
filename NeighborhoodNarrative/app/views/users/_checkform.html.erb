@@ -1,0 +1,7 @@
+<%= form_tag(users_finalpage_path) do -%>
+
+<% end -%>
+<%= form_tag('/users/finalpage', method: :get) do -%>
+  <%= text_field_tag :persona %>
+  <%= submit_tag 'Search', class: 'btn btn btn-primary btn-lg' %>
+<% end -%>

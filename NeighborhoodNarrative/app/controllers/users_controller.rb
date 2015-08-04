@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+#before action :users, only:[:show, :edit, :update, :destroy]
+
 
 
 def fetch(url)
@@ -107,9 +109,9 @@ end
 
 
 
-
 def new
-		@users = User.all
+		@users = User.new
+		
 	end
 	def home
 	end
@@ -119,12 +121,22 @@ def new
 	end
 	def search
 		
+		
 	end
 	def finalpage
-		@result = post("60613", "child")
+		
+		@persona = params[:persona]
+        @zipcode = params[:zipcode]
+         
+		@result = post(@zipcode, @persona)
+
 	end
+	
+
 	private
 	def post(zip, personna)
+    require "net/http"
+    require "uri"
 	url = "https://api.narrativescience.com/v4/editorial/55b135718ff57d597c2fb6e6/story/"
 	uri = URI.parse(url)
 	https = Net::HTTP.new(uri.host, uri.port)

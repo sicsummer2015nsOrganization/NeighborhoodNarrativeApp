@@ -1,0 +1,9 @@
+<%= form_tag(users_finalpage_path) do -%>
+
+<% end -%>
+
+<%= form_tag('/users/finalpage', method: :get) do -%>
+  <%= text_field_tag :zipcode, "Enter Zipcode" %>
+  <%= text_field_tag :persona, "Enter baby, child or teen" %>
+  <%= submit_tag 'Search', class: 'btn btn btn-primary btn-lg' %>
+<% end -%>

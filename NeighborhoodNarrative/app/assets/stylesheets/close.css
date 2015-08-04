@@ -1,4 +1,7 @@
-
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import 'bootstrap';
+body {
+  
 
 .navClose{
 height: 150px;
@@ -32,4 +35,5 @@ margin-bottom: 1.2em;
 
 .resultsMain{
 height: 500px;
+}
 }
