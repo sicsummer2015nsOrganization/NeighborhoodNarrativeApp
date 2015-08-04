@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 #before action :users, only:[:show, :edit, :update, :destroy]
 
+require 'net/http'
+
 def fetch(url)
 	schoolsArray = Array.new()
 	resp = Net::HTTP.get_response(URI.parse(url))
