@@ -179,3 +179,51 @@ footer{
 
 }
 
+/*results styles:
+*/
+
+.results-bar{
+	background-color: #EC1E24;
+	padding-top: .25em;
+	padding-left:1em;
+	padding-bottom:.25em;
+	width: 80%;
+	margin-top: 40px;
+	margin-left: auto ;
+  	margin-right: auto ;
+}
+
+.results-bar h4{
+	font-family: 'Montserrat', sans-serif !important;
+	font-weight: 400;
+	letter-spacing: 2px !important;
+	margin-top:.5em;
+}
+
+.results{
+	width: 80%;
+	margin-left: auto ;
+  	margin-right: auto ;
+	padding: 2em;
+	color: #0085BB;
+}
+
+.results h5{
+	font-family: 'Montserrat', sans-serif !important;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #EC1E24;
+}
+.results p{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1.25em;
+}
+
+.dis{
+	color: gray;
+	font-size: 1em;
+	font-style: italic;
+}
+
+
