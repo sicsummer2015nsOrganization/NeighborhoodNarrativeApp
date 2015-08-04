@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 #before action :users, only:[:show, :edit, :update, :destroy]
 
-require 'net/http'
+
 
 def fetch(url)
 	schoolsArray = Array.new()
@@ -125,9 +125,7 @@ def new
 	end
 	def finalpage
 		
-		puts "============"
-		puts params.inspect
-		puts "============"
+		
         @zipcode = params[:zipcode]
          
 		@result = post(@zipcode, "baby")
@@ -137,6 +135,8 @@ def new
 
 	private
 	def post(zip, personna)
+    require "net/http"
+    require "uri"
 	url = "https://api.narrativescience.com/v4/editorial/55b135718ff57d597c2fb6e6/story/"
 	uri = URI.parse(url)
 	https = Net::HTTP.new(uri.host, uri.port)
