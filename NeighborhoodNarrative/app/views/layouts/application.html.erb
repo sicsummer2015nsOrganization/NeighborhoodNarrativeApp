@@ -1,51 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5" />
 	<meta name="description" content="">
-    <link rel="icon" href="favicon.ico">
 
-  	<title>Close to Home</title>
+  
+    
+  	<title> Close to Home </title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  	<%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+   
+
+  	
 </head>
 <body>
- <nav class="navbar navbar-default navbar-static-top navClose">
-      <div class="container posMiddle posCenter">
-        <div class="row">
-          <div class="col-xs-4">
-          <%= link_to "Home", users_home_path, class: "btn btn-primary btn-lg" %>
-          </div>
-          <div class="col-xs-4">
-             <div>Close to Home Image</div>  
-          </div>
-          <div class="col-xs-4">
-            <%= link_to "About", users_about_path, class: "btn btn-primary btn-lg" %>
-          </div>
-        </div>
-      </div>
-    </nav>
+<%= render "/layouts/navbar" %>
 
+<header>
 
-    
-    
-      
-
-    <!-- /.container -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-     
-
+<div Class = "container">
+</header>
 <%= yield %>
+
+    
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+    <div class="container marketing">
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+    
 
 </body>
 </html>
+
