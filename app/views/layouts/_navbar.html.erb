@@ -2,13 +2,15 @@
       <div class="container posMiddle posCenter">
 <div class="row">
   <div class="col-xs-4">
-  <a  class="btn btn-primary btn-lg" <%= link_to "Home", users_home_path %>> </a>
+     <%= link_to "Home", users_home_path, class:"btn btn-primary btn-lg" %>
+  
   </div>
-  <div class="col-xs-4 logo">
+  <div < class="col-xs-4 logo">
       <%= link_to image_tag("logo.svg", alt: "logo")%>
   </div>
+
   <div class="col-xs-4">
-<a class="btn btn-primary btn-lg" <%= link_to "About", users_about_path %> ></a>  
+  <%= link_to "About", users_about_path, class:"btn btn-primary btn-lg" %> 
   </div>
 </div>
       </div>

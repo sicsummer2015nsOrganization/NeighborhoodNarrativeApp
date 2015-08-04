@@ -125,10 +125,10 @@ def new
 	end
 	def finalpage
 		
-		
+		@persona = params[:persona]
         @zipcode = params[:zipcode]
          
-		@result = post(@zipcode, "baby")
+		@result = post(@zipcode, @persona)
 
 	end
 	
