@@ -1,9 +1,23 @@
- <%= form_tag(users_finalpage_path) do -%>
-
+<%= form_tag(users_finalpage_path) do -%>
 <% end -%>  
 
 <%= form_tag('/users/finalpage', method: :get) do -%>
-  <%= text_field_tag :zipcode, "Enter Zipcode" %>
-  <%= text_field_tag :persona, "Enter baby, child or teen" %>
+  <%= text_field_tag :zipcode, nil, required: true, placeholder: "Enter Zipcode" %>
+
+  <radiogroup>
+    <fieldset>
+  	  <%= label_tag 'Early Childhood' %>
+  	  <%= radio_button_tag 'persona', "baby", false, required: true, class: 'chkSizeLg' %>
+    </fieldset>
+    <fieldset>
+  	  <%= label_tag 'Elementary School' %>
+  	  <%= radio_button_tag 'persona', "child", false, class: 'chkSizeLg' %>
+    </fieldset>
+    <fieldset>
+  	  <%= label_tag 'High School' %>
+  	  <%= radio_button_tag 'persona', "teen", false, class: 'chkSizeLg' %>
+    </fieldset>
+  </radiogroup>
+
   <%= submit_tag 'Search', class: 'btn btn btn-primary btn-lg' %>
 <% end -%>
