@@ -5,7 +5,9 @@ height: 150px;
 .posMiddle{
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .posCenter{
@@ -122,7 +124,8 @@ body{
 
 .carousel-control.left, .carousel-control.right {
 	background: none !important; 
-	filter: progid: none !important; 
+	-webkit-filter: progid: none !important; 
+	        filter: progid: none !important; 
 	opacity: 1;
 	text-shadow: none;
 }
