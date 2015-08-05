@@ -1,229 +1,237 @@
-
-
-.navClose{
-height: 150px;
+.navClose {
+    height: 150px;
 }
 
-.posMiddle{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+.posMiddle {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.posCenter{
-text-align: center;
+.posCenter {
+    text-align: center;
 }
 
-.posRowMarginTop{
-margin-top: 1.2em;
+.posRowMarginTop {
+    margin-top: 1.2em;
 }
 
-.posRowMarginBottom{
-margin-bottom: 1.2em;
+.posRowMarginBottom {
+    margin-bottom: 1.2em;
 }
 
-.chkSizeLg{
-	width : 2.0em;
-	height : 2.0em;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+.chkSizeLg {
+    width: 2.0em;
+    height: 2.0em;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
-.resultsMain{
-height: 300px;
-background-color: whitesmoke;
-color: red;
+.resultsMain {
+    height: 300px;
+    background-color: whitesmoke;
+    color: red;
 }
+
 
 /*Deirdre's styles*/
 
-body{  
-	font-family: 'Montserrat', sans-serif;
-	/*?not working*/
-	font-weight: 400 !important;
-	color: white;
+body {
+    font-family: 'Montserrat', sans-serif;
+    /*?not working*/
+    font-weight: 400 !important;
+    color: white;
 }
 
-.item{
-	width:100%; 
-	background: #6DCEF5;
-	height: 32em;
-	margin:1em auto;
-	position: relative;
+.item {
+    width: 100%;
+    background: #6DCEF5;
+    height: 32em;
+    margin: 1em auto;
+    position: relative;
 }
 
-.school{
+.school {
     font-family: 'Montserrat', sans-serif !important;
     font-size: 1em !important;
     color: white;
-  }
+}
 
- .navbar{
- 	margin-top: 1em;
- 	margin-bottom: 1em;
- 	padding-top: 2em;
- }
+.navbar {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 2em;
+}
 
 .navbar-default {
     background-color: white !important;
     border-color: white;
-  }
+}
 
-  h4{
-  	 font-family: 'Open Sans', sans-serif;
-  	 color: white;
-  	 margin-top: 2em;
-  }
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin-top: 2em;
+}
 
-  .intro{
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
-	font-size: 1.25em;
-	color: #FFFFFF;
-	text-align: center;
-	letter-spacing: .5px;
-
-/*	margin-right: 10em;
+.intro {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.25em;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: .5px;
+    /*	margin-right: 10em;
 	margin-left: 10em;
 	clear: both;
 	position: absolute;
 	bottom: 5em;*/
 }
 
-.carousel-caption{
-		text-shadow: 0 0 0 !important; 
+.carousel-caption {
+    text-shadow: 0 0 0 !important;
 }
 
-
-.btn{
-	font-family: 'Montserrat', sans-serif !important;
-	border-radius: 0 !important;
-	letter-spacing: 2px !important;
-	font-weight: 400 !important;
-
-		padding-left: 2em;
-	padding-right: 2em;
-
+.btn {
+    font-family: 'Montserrat', sans-serif !important;
+    border-radius: 0 !important;
+    letter-spacing: 2px !important;
+    font-weight: 400 !important;
+    padding-left: 2em;
+    padding-right: 2em;
 }
-.btn-lg{
-	 border-radius: 0 !important;
 
+.btn-lg {
+    border-radius: 0 !important;
 }
+
 .btn-primary {
-  background-color: #009ED4;
-  border-color: #009ED4;
+    background-color: #009ED4;
+    border-color: #009ED4;
 }
 
-.logo{
-
-}
+.logo {}
 
 
 /*.carousel-caption{
 	position: relative !important;
 	padding-top: 4em !important;
 }*/
-.carousel-max-caption{
-	height: 100%;
-	padding-top: 3em;
+
+.carousel-max-caption {
+    height: 100%;
+    padding-top: 3em;
 }
 
-.carousel-max-img{
-	max-height: 85%;
-}
-.carousel-max-p{
-	max-height: 15%;
+.carousel-max-img {
+    max-height: 85%;
 }
 
-.carousel-control.left, .carousel-control.right {
-	background: none !important; 
-	filter: progid: none !important; 
-	opacity: 1;
-	text-shadow: none;
+.carousel-max-p {
+    max-height: 15%;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background: none !important;
+    filter: progid: none !important;
+    opacity: 1;
+    text-shadow: none;
 }
 
 p {
-  margin: 0 0 2em;
+    margin: 0 0 2em;
 }
 
-.enter{
-	background-color: #EC1E24;
-	border-color: #EC1E24;;
+.enter {
+    background-color: #EC1E24;
+    border-color: #EC1E24;
+    ;
 }
+
+
 /*search page items:
 */
 
-.marketing{
-	width: 100%
+.marketing {
+    width: 100%
 }
 
-#btnSearch{
-	background-color: #EC1E24;
-	border-color: #EC1E24;
-	margin-bottom: 1em;
-
+#btnSearch {
+    background-color: #EC1E24;
+    border-color: #EC1E24;
+    margin-bottom: 1em;
 }
 
-.blue-bar{
-	width:100%; 
-	background: #6DCEF5;
-/*	height: 32em;
-*/	margin:1em auto;
-	position: relative;
+.blue-bar {
+    width: 100%;
+    background: #6DCEF5;
+    /*	height: 32em;
+*/
+    margin: 1em auto;
+    position: relative;
 }
 
-
-footer{
-	font-family: 'Open Sans', sans-serif;
-	color: #009ED4;
-
+footer {
+    font-family: 'Open Sans', sans-serif;
+    color: #009ED4;
 }
+
 
 /*results styles:
 */
 
-.results-bar{
-	background-color: #EC1E24;
-	padding-top: .25em;
-	padding-left:1em;
-	padding-bottom:.25em;
-	width: 80%;
-	margin-top: 40px;
-	margin-left: auto ;
-  	margin-right: auto ;
+.results-bar {
+    background-color: #EC1E24;
+    padding-top: .25em;
+    padding-left: 1em;
+    padding-bottom: .25em;
+    width: 80%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.results-bar h4{
-	font-family: 'Montserrat', sans-serif !important;
-	font-weight: 400;
-	letter-spacing: 2px !important;
-	margin-top:.5em;
+.results-bar h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 400;
+    letter-spacing: 2px !important;
+    margin-top: .5em;
 }
 
-.results{
-	width: 80%;
-	margin-left: auto ;
-  	margin-right: auto ;
-	padding: 2em;
-	color: #0085BB;
+.results {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    color: #0085BB;
 }
 
-.results h5{
-	font-family: 'Montserrat', sans-serif !important;
-	font-weight: 400;
-	text-transform: uppercase;
-	color: #EC1E24;
-}
-.results p{
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
-	font-size: 1.25em;
+.results h5 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #EC1E24;
 }
 
-.dis{
-	color: gray;
-	font-size: 1em;
-	font-style: italic;
+.results p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.25em;
+}
+
+.dis {
+    color: gray;
+    font-size: 1em;
+    font-style: italic;
 }
 
 
+/*about page styles:
+*/
+
+.ns-link img {
+    width: 20em;
+    margin: 0 0;
+    padding: 0;
+}
