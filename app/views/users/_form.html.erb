@@ -4,20 +4,63 @@
 <%= form_tag('/users/finalpage', method: :get) do -%>
   <%= text_field_tag :zipcode, nil, required: true, placeholder: "Enter Zipcode" %>
 
+  
   <radiogroup>
-    <fieldset>
-  	  <%= label_tag 'Early Childhood' %>
-  	  <%= radio_button_tag 'persona', "baby", false, required: true, class: 'chkSizeLg' %>
-    </fieldset>
-    <fieldset>
-  	  <%= label_tag 'Elementary School' %>
-  	  <%= radio_button_tag 'persona', "child", false, class: 'chkSizeLg' %>
-    </fieldset>
-    <fieldset>
-  	  <%= label_tag 'High School' %>
-  	  <%= radio_button_tag 'persona', "teen", false, class: 'chkSizeLg' %>
-    </fieldset>
-  </radiogroup>
+    
+    
+          <div class="col-xs-1">&nbsp;</div>
+        </div>
+        
+        <div class="row posRowMarginTop posCenter">
+          <div class="col-sm-4">
+            <%= link_to image_tag("baby.svg",  class:"img-circle",  alt:"Generic placeholder image", width:"140", height:"140")  %>
+            
+            <span>
+              <h3><%= label_tag 'Early Childhood' %></h3>
+              <%= radio_button_tag 'persona', "baby", false, required: true, class: 'chkSizeLg' %>
+            </span>
+            
+          </div>
+  	  
+    
+    
+    <div class="col-sm-4">
+            <%= link_to image_tag("childhood.svg",  class:"img-circle",  alt:"Generic placeholder image", width:"140", height:"140")  %>
+            
+            
+            <span>
+              <h3><%= label_tag 'Elementary School' %></h3>
+              <%= radio_button_tag 'persona', "child", false, class: 'chkSizeLg' %>
+            </span>
+            
+          </div>
+  	  
+    
+    
+    <div class="col-sm-4">
+            <%= link_to image_tag("teen.svg",  class:"img-circle",  alt:"Generic placeholder image", width:"140", height:"140")  %>
+            
+            <p>
+            <span>
+              <h3><%= label_tag 'High School' %></h3>
+              <%= radio_button_tag 'persona', "teen", false, class: 'chkSizeLg' %>
+            </span>
 
-  <%= submit_tag 'Search', class: 'btn btn btn-primary btn-lg' %>
+            </p>
+          </div>
+        </div><!-- /.row checkboxes -->
+        </ul>
+        <div class="row">
+          <div class="col-lg-12 posCenter posMiddle">
+          <h4>Select any one option!</h4>
+          </div>
+        </div>
+       </div> 
+    
+  </radiogroup>
+  
+  
+  <%= submit_tag 'Search', class: 'btn btn btn-danger btn-lg' %>
+  
+  
 <% end -%>
