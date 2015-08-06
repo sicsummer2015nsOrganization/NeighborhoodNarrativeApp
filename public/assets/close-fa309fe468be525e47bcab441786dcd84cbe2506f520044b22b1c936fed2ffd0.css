@@ -1,0 +1,171 @@
+.navClose{
+height: 150px;
+}
+
+.posMiddle{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.posCenter{
+text-align: center;
+}
+
+.posRowMarginTop{
+margin-top: 1.2em;
+}
+
+.posRowMarginBottom{
+margin-bottom: 1.2em;
+}
+
+.chkSizeLg{
+	width : 2.0em;
+	height : 2.0em;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.resultsMain{
+height: 300px;
+background-color: whitesmoke;
+color: red;
+}
+body{  
+	font-family: 'Montserrat', sans-serif;
+	/*?not working*/
+	font-weight: 400 !important;
+	color: white;
+}
+
+.item{
+	width:100%; 
+	background: #6DCEF5;
+	height: 32em;
+	margin:1em auto;
+	position: relative;
+}
+
+.school{
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1em !important;
+    color: white;
+  }
+
+ .navbar{
+ 	margin-top: 1em;
+ 	margin-bottom: 1em;
+ 	padding-top: 2em;
+ }
+
+.navbar-default {
+    background-color: white !important;
+    border-color: white;
+  }
+
+  h4{
+  	 font-family: 'Open Sans', sans-serif;
+  	 color: white;
+  	 margin-top: 2em;
+  }
+
+  .intro{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1.25em;
+	color: #FFFFFF;
+	text-align: center;
+	letter-spacing: .5px;
+}
+
+
+
+.carousel-caption{
+		text-shadow: 0 0 0 !important; 
+}
+
+
+.btn{
+	font-family: 'Montserrat', sans-serif !important;
+	border-radius: 0 !important;
+	letter-spacing: 2px !important;
+	font-weight: 400 !important;
+
+		padding-left: 2em;
+	padding-right: 2em;
+
+}
+.btn-lg{
+	 border-radius: 0 !important;
+
+}
+.btn-primary {
+  background-color: #009ED4;
+  border-color: #009ED4;
+}
+
+.logo{
+
+}
+.carousel-max-caption{
+	height: 100%;
+	padding-top: 3em;
+}
+
+.carousel-max-img{
+	max-height: 85%;
+}
+.carousel-max-p{
+	max-height: 15%;
+}
+
+.carousel-control.left, .carousel-control.right {
+	background: none !important; 
+	-webkit-filter: progid: none !important; 
+	        filter: progid: none !important; 
+	opacity: 1;
+	text-shadow: none;
+}
+
+p {
+  margin: 0 0 2em;
+}
+
+.enter{
+	background-color: #EC1E24;
+	border-color: #EC1E24;;
+}
+/*search page items:
+*/
+
+.marketing{
+	width: 100%
+}
+
+#btnSearch{
+	background-color: #EC1E24;
+	border-color: #EC1E24;
+	margin-bottom: 1em;
+
+}
+
+.blue-bar{
+	width:100%; 
+	background: #6DCEF5;
+/*	height: 32em;
+*/	margin:1em auto;
+	position: relative;
+}
+
+
+footer{
+	font-family: 'Open Sans', sans-serif;
+	color: #009ED4;
+
+}
+
+
+
